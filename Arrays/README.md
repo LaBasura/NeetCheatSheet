@@ -7,3 +7,18 @@
 <ul> <li> For example, [1,1,1,2,3,3] the bucket list would look something like: [[], [2], [3], [1], [], []]
 </ul>
 </ul>
+
+## hasDuplicate
+```python
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        checker = {}
+        for i in nums:
+            if i in checker:
+                return True
+            else:
+                checker[i] = 0
+        return False
+```
+**Time Complexity: O(n) Space Complexity O(n)** <br>
+We iterate through the entire array and utilize a hashmap to do lookups of O(1) time for each element that we encounter in the array. As such we get a time complexity of O(n) but a space complexity of O(n) due to having to create another data structure for each element in the array.
