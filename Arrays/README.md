@@ -2,8 +2,8 @@
 <ul>
 <li>The most ESSENTIAL algorithm/pattern to learn for future concepts presented in this cheat sheet. Remember, if you don't know what to do probably just throw a HashMap at it.</li>
 <li> Hashing/Hashmaps are mainly used for counting the frequencies in arrays within the first pass and often creates a space and iteration complexity of O(n) for both, since a look up is usually of O(1) in a hashMap/hashSet or character array.
-<li> There are times when only letters are required, i.e. Capitals or Lowercase letters only, such that you need a list of zeros representing the ith letter’s frequency in an array
-<li> K-frequent elements actually utilizes a form of hashing/sort called bucket sort in which since we need the k-most frequent elements in a fixed list we can concur that the max amount of frequency that can happen is the length of the list and the minimum is 0.
+<li> There are times when only letters are required, i.e. Capitals or Lowercase letters only, that no dictionary is really required we can simply use an array of 0s that represent the frequency of characters that occured since our alphabet is 26 characters long we can simply use the order of characters as the index of this array. For example: chars = [0, 0, 0, 0, 0... 0], if we find the letter 'a' in a string and want to increment its frequency we can simply do chars[ord(current_character) - ord(a)] += 1 since current_character = 'a' the expression chars[ord(current_character) - ord(a)] evaluates to ord[0].
+<li> This idea extends towards the problem K-frequent elements which actually utilizes a form of hashing/sort called bucket sort. Since we need the k-most frequent elements in a fixed list we can concur that the max amount of frequency that can happen is the length of the list and the minimum is 0. So we have a fixed amount of "choices" similar to alphabet frequencies in the above point.
 <ul> <li> For example, [1,1,1,2,3,3] the bucket list would look something like: [[], [2], [3], [1], [], []]
 </ul>
 </ul>
